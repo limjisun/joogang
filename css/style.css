@@ -1,13 +1,14 @@
-@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
 
 html {width:100%; height:100%; -ms-touch-action:manipulation; touch-action:manipulation;}
 body {width:100%; height:100%; margin:0; padding:0; color:#111; background:#fff;  font-family: 'Noto Sans KR', sans-serif; -webkit-text-size-adjust:none; -webkit-touch-callout:none; -webkit-user-select:none; -ms-user-select:none; user-select:none;}
 .joongang_color{color:#f6330a}
-.font-20{font-size: 20px;}
-.font-35{font-size: 35px;}
+.font-17{font-size: 17px;}
+.font-30{font-size: 30px;}
 .m_top20{margin-top: 20px;}
 .font-bold{font-weight: 900;}
 .font-bold700{font-weight: 700;}
+.text-center{text-align: center;}
 .device_wrap {
     position: relative; 
     width: 100%; 
@@ -50,7 +51,7 @@ body {width:100%; height:100%; margin:0; padding:0; color:#111; background:#fff;
 .a_2 {
     position: absolute;
     left: 17%; 
-    top: 20%; 
+    top: 14%; 
     z-index: 10;
     opacity: 0;
 }
@@ -58,7 +59,7 @@ body {width:100%; height:100%; margin:0; padding:0; color:#111; background:#fff;
 .a_3 {
     position: absolute;
     left: 17%; 
-    top: 30%; 
+    top: 20%; 
     z-index: 10;
     opacity: 0;
 }
@@ -66,7 +67,7 @@ body {width:100%; height:100%; margin:0; padding:0; color:#111; background:#fff;
 .a_4 {
     position: absolute;
     left: 17%; 
-    top: 40%; 
+    top: 32%; 
     z-index: 30;
     opacity: 0;
 }
@@ -76,7 +77,7 @@ body {width:100%; height:100%; margin:0; padding:0; color:#111; background:#fff;
     border: 1px solid #cf2400;
     color: #cf2400;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 17px;
     padding: 2px 12px 4px;
 }
 
@@ -117,59 +118,10 @@ body {width:100%; height:100%; margin:0; padding:0; color:#111; background:#fff;
 }
 
 
-.a_5 {
-    position: absolute;
-    left: 23%; 
-    top: 51%; 
-    z-index: 10;
-    width: 56%; 
-    max-width: 211px;
-    opacity: 0;
-}
-
-.a_6 {
-    position: absolute;
-    left: 17%; 
-    top: 24%; 
-    z-index: 30;
-    width: 13%; 
-    max-width: 50px;
-    opacity: 0;
-}
-
-.a_7 {
-    position: absolute;
-    left: 16%; 
-    top: 39%; 
-    z-index: 30;
-    width: 62%; 
-    max-width: 234px;
-    opacity: 0;
-}
-
-.a_8 {
-    position: absolute;
-    left: 60%; 
-    top: 62%; 
-    z-index: 30;
-    width: 29%; 
-    max-width: 108px;
-    opacity: 0;
-}
-
-.a_9 {
-    position: absolute;
-    left: 64%; 
-    top: 0; 
-    z-index: 30;
-    width: 25%; 
-    max-width: 96px;
-    opacity: 0;
-}
 
 .a_10 {
     position: absolute;
-    left: 18%; 
+    left: 17%; 
     top: 25%; 
     z-index: 30;
     opacity: 0;
@@ -177,8 +129,8 @@ body {width:100%; height:100%; margin:0; padding:0; color:#111; background:#fff;
 
 .a_11 {
     position: absolute;
-    left: 18%; 
-    top: 40%; 
+    left: 17%; 
+    top: 34%; 
     z-index: 30;
     opacity: 0;
 }
