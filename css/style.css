@@ -1,0 +1,392 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+html {width:100%; height:100%; -ms-touch-action:manipulation; touch-action:manipulation;}
+body {width:100%; height:100%; margin:0; padding:0; color:#111; background:#fff;  font-family: 'Noto Sans KR', sans-serif; -webkit-text-size-adjust:none; -webkit-touch-callout:none; -webkit-user-select:none; -ms-user-select:none; user-select:none;}
+.joongang_color{color:#f6330a}
+.font-20{font-size: 20px;}
+.font-35{font-size: 35px;}
+.m_top20{margin-top: 20px;}
+.font-bold{font-weight: 900;}
+.font-bold700{font-weight: 700;}
+.device_wrap {
+    position: relative; 
+    width: 100%; 
+    height: 100vh; 
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.motion_wrap {
+    position: relative; 
+    width: 100%; 
+    opacity: 0; 
+    z-index: 0;
+}
+
+.motion {
+    position: relative; 
+    width: 100%; 
+    height: 100vh; 
+    max-height: 760px; 
+    overflow: hidden;
+}
+
+.motion img {
+    display: block; 
+    width: 100%;
+}
+
+
+.a_1 {
+    position: absolute; 
+    left: calc(50% - 100px);
+    top: 45%; 
+    z-index: 15; 
+    max-width: 200px; 
+    opacity: 1;
+}
+
+
+.a_2 {
+    position: absolute;
+    left: 17%; 
+    top: 20%; 
+    z-index: 10;
+    opacity: 0;
+}
+
+.a_3 {
+    position: absolute;
+    left: 17%; 
+    top: 30%; 
+    z-index: 10;
+    opacity: 0;
+}
+
+.a_4 {
+    position: absolute;
+    left: 17%; 
+    top: 40%; 
+    z-index: 30;
+    opacity: 0;
+}
+
+.tag{
+    background: #fff4f1;
+    border: 1px solid #cf2400;
+    color: #cf2400;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 2px 12px 4px;
+}
+
+.tag_1{
+    position: absolute;
+    left: 23%; 
+    top: 70%; 
+    z-index: 10;
+    opacity: 0;
+}
+.tag_2{
+    position: absolute;
+    left: 63%; 
+    top: 75%; 
+    z-index: 10;
+    opacity: 0;
+}
+.tag_3{
+    position: absolute;
+    left: 11%; 
+    top: 94%; 
+    z-index: 10;
+    opacity: 0;
+}
+.tag_4{
+    position: absolute;
+    left: 48%; 
+    top: 67%; 
+    z-index: 10;
+    opacity: 0;
+}
+.tag_5{
+    position: absolute;
+    left: 10%; 
+    top: 57%; 
+    z-index: 10;
+    opacity: 0;
+}
+
+
+.a_5 {
+    position: absolute;
+    left: 23%; 
+    top: 51%; 
+    z-index: 10;
+    width: 56%; 
+    max-width: 211px;
+    opacity: 0;
+}
+
+.a_6 {
+    position: absolute;
+    left: 17%; 
+    top: 24%; 
+    z-index: 30;
+    width: 13%; 
+    max-width: 50px;
+    opacity: 0;
+}
+
+.a_7 {
+    position: absolute;
+    left: 16%; 
+    top: 39%; 
+    z-index: 30;
+    width: 62%; 
+    max-width: 234px;
+    opacity: 0;
+}
+
+.a_8 {
+    position: absolute;
+    left: 60%; 
+    top: 62%; 
+    z-index: 30;
+    width: 29%; 
+    max-width: 108px;
+    opacity: 0;
+}
+
+.a_9 {
+    position: absolute;
+    left: 64%; 
+    top: 0; 
+    z-index: 30;
+    width: 25%; 
+    max-width: 96px;
+    opacity: 0;
+}
+
+.a_10 {
+    position: absolute;
+    left: 18%; 
+    top: 25%; 
+    z-index: 30;
+    opacity: 0;
+}
+
+.a_11 {
+    position: absolute;
+    left: 18%; 
+    top: 40%; 
+    z-index: 30;
+    opacity: 0;
+}
+
+.a_btn {
+    position: absolute;
+    left: 60%; 
+    top: 62%; 
+    z-index: 40;
+    opacity: 0; 
+    width: 29%; 
+    max-width: 108px; 
+    height: 47px;
+}
+
+.a_btn .bg {
+    position: absolute; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    border-radius: 45px; 
+    background: #1f1f1f; 
+    z-index: 0;
+}
+
+.a_btn .dot {
+    position: absolute; 
+    left: 8px; 
+    top: 5px; 
+    width: 37px; 
+    height: 37px; 
+    border-radius: 100%; 
+    background: #fff; 
+    z-index: 10;
+}
+
+.a_btn img {
+    width: auto; 
+    height: 100%;
+}
+
+.a_btn .on {
+    position: absolute; 
+    top: 14px; 
+    left: 15px; 
+    height: 19px; 
+    opacity: 0; 
+    z-index: 5;
+}
+
+.a_btn .off {
+    position: absolute; 
+    top: 15px; 
+    right: 15px; 
+    height: 17px; 
+    z-index: 5;
+}
+
+.main_content {
+    opacity: 0;
+    width: 100%;
+}
+
+/* 스크롤 콘텐츠 영역 반응형 조정 */
+.main_top {
+    position: relative; 
+    width: 100%;
+    height: auto; 
+    min-height: 500px;
+    background: #303030; 
+    overflow: hidden;
+    padding-bottom: 50px;
+}
+
+.main_intro {
+    position: relative;  
+    width: 100%;
+    height: auto; 
+    min-height: 500px;
+    background: url('../images/bg_1.jpg'); 
+    background-size: cover;
+    padding-bottom: 50px;
+}
+
+.main_bottom {
+    position: relative;  
+    width: 100%;
+    height: auto; 
+    min-height: 700px;
+    background: url('../images/bg_2.jpg'); 
+    background-size: cover;
+    padding-bottom: 50px;
+}
+
+/* 반응형 아이템 위치 조정 */
+.scroll_motion .ani_sm.item {
+    position: absolute;
+}
+
+.scroll_motion .ani_sm .ani_item img {
+    width: 100%;
+    height: auto;
+}
+
+/* 라인 스타일 조정 */
+.line {
+    position: absolute;
+    top: 0;
+    left: 13%;
+    width: 2px;
+    height: 465px;
+    background: #e2e0e0;
+}
+
+.line2 {
+    position: absolute; 
+    top: 74px;
+    left: 13%;
+    width: 2px;
+    height: 0px;
+    background: #ce3726;
+}
+
+/* 미디어 쿼리 추가 */
+@media screen and (max-width: 767px) {
+    /* 모바일 기기 */
+    .main_top, .main_intro, .main_bottom {
+        min-height: 400px;
+    }
+    
+    .line, .line2 {
+        left: 10%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* 태블릿 기기 */
+    .line, .line2 {
+        left: 12%;
+    }
+}
+
+/* 아이템 위치 - 스크롤 콘텐츠 영역 */
+.item_1 { left: 8%; top: 12%; width: 16%; max-width: 61px; }
+.item_2 { left: 9%; top: 27%; width: 49%; max-width: 183.5px; }
+.item_3 { left: 62%; top: 17%; width: 32%; max-width: 121px; }
+.item_4 { left: 63%; top: 35%; width: 25%; max-width: 96px; }
+.item_5 { left: 8%; top: 36%; width: 83%; max-width: 313px; }
+.item_6 { left: 9%; top: 59%; width: 83%; max-width: 312px; }
+.item_6_1 { left: 0; top: 71%; width: 100%; max-width: 479px; }
+
+.item_7 { left: 19%; top: 12%; width: 58%; max-width: 217px; }
+.item_8 { left: 19%; top: 28%; width: 9%; max-width: 32.5px; }
+.item_9 { left: 19%; top: 38%; width: 52%; max-width: 197px; }
+.item_10 { left: 19%; top: 53%; width: 69%; max-width: 261px; }
+.item_11 { left: 19%; top: 73%; width: 47%; max-width: 178px; }
+.item_12 { left: 9%; top: 87%; width: 84%; max-width: 317px; }
+
+.item_13 { left: 1.5%; top: 5%; width: 18%; max-width: 68px; }
+.item_14 { left: 23%; top: 6%; width: 49%; max-width: 185px; }
+.item_15 { left: 23%; top: 10%; width: 51%; max-width: 193px; }
+.item_16 { left: 6%; top: 16%; width: 13%; max-width: 49px; }
+.item_17 { left: 23%; top: 17%; width: 42%; max-width: 156px; }
+.item_18 { left: 18%; top: 23%; width: 70%; max-width: 265px; }
+.item_19 { left: 7%; top: 35%; width: 13%; max-width: 49px; }
+.item_20 { left: 23%; top: 35%; width: 29%; max-width: 107px; }
+.item_21 { left: 18%; top: 42%; width: 70%; max-width: 265px; }
+.item_22 { left: 7%; top: 53%; width: 13%; max-width: 49px; }
+.item_23 { left: 23%; top: 54%; width: 41%; max-width: 153px; }
+.item_24 { left: 18%; top: 60%; width: 70%; max-width: 265px; }
+.item_25 { left: 8%; top: 78%; width: 85%; max-width: 320px; }
+.item_26 { left: 0; top: 89%; width: 100%; max-width: 375px; }
+
+.item_27 { left: 71%; top: 13%; width: 24%; max-width: 91px; }
+.item_28 { left: 67%; top: 36%; width: 19%; max-width: 73px; }
+.item_29 { left: 67%; top: 55%; width: 20%; max-width: 74px; }
+
+/* 스크롤 애니메이션 */
+.scroll_motion .ani_type_top .ani_item {
+    opacity: 0; 
+    transform: translateY(80px); 
+    transition: all .8s;
+}
+.scroll_motion .ani_type_top.ani_active .ani_item {
+    opacity: 1; 
+    transform: translateY(0);
+}
+
+.scroll_motion .ani_type_right .ani_item {
+    opacity: 0; 
+    transform: translateX(80px); 
+    transition: all .8s;
+}
+.scroll_motion .ani_type_right.ani_active .ani_item {
+    opacity: 1; 
+    transform: translateX(0);
+}
+
+.scroll_motion .ani_type_alpha .ani_item {
+    opacity: 0; 
+    transition: all .8s;
+}
+.scroll_motion .ani_type_alpha.ani_active .ani_item {
+    opacity: 1;
+}
+
+/* 스크롤바 커스텀 */
+.scroll-content {
+    padding-bottom: 44px;
+}
