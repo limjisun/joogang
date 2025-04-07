@@ -68,53 +68,61 @@
 				</div>
 
 				<div class="a_10">
-					<div class="font-30 font-bold700">경험으로 말하고 </div> 
+					<div class="title">임지선 취업공약</div>
+					<div class="font-30 font-bold700">임지선은 약속합니다. </div> 
 				</div>
 				<div class="a_11">
-					<div class="font-30 font-bold700">완성도로 설득합니다.</div> 
+					<div class="font-30 font-bold700">준비된 일꾼, <br/>실력으로 증명하겠습니다.</div> 
 				</div>
 			</div>
 		</div>
 		<div class="main_content scroll_motion">
 			<div class="main_top">
-				<!-- <div class="ani_sm ani_type_top item item_1">
+				
+				 <div class="ani_sm ani_type_top item item_1">
 					<div class="ani_item">
-						<img src="images/img_12.png" alt="">
+						<img src="images/logo_thejoongang.png" alt="">
 					</div>
 				</div>
-				<div class="ani_sm ani_type_top item item_2">
-					<div class="ani_item">
-						<img src="images/img_13.png" alt="">
+				<div class="relative">
+					<div class="line"></div>
+					<div class="line2"></div>
+					<div class="ani_sm ani_type_top item item_2">
+						<div class="ani_item">
+							<div class="font-17 font-bold700 white_color">1</div>
+						</div>
 					</div>
+					<div class="ani_sm ani_type_top item item_3">
+						<div class="ani_item">
+							<div class="font-17 font-bold700 white_color">모르는 건 배웁니다</div>
+						</div>
+					</div>
+					<div class="ani_sm ani_type_top item item_4">
+						<div class="ani_item">
+							<div class="font-17 font-bold700 white_color">배운 건 나눕니다.</div>
+						</div>
+					</div>
+					<div class="ani_sm ani_type_top item item_5">
+						<div class="ani_item">
+							<div class="font-17 font-bold700 white_color">늘 팀에 기여하는 퍼블리셔가 되겠습니다.</div>
+						</div>
+					</div>
+					<div class="ani_sm ani_type_top item item_6">
+						<div class="ani_item">
+							<div class="white_color font-14 p-r30">새로운 것을 빠르게 습득하며, 이를 혼자만의 역량으로 두지 않습니다.
+								팀원들과 지식과 경험을 적극적으로 공유함으로써,
+								함께 성장하는 조직 문화를 만들어가고자 합니다.</div>
+						</div>
+					</div>
+					<div class="ani_sm ani_type_top item item_6_1">
+						<div class="ani_item">
+							
+						</div>
+					</div> 
 				</div>
-				<div class="ani_sm ani_type_top item item_3">
-					<div class="ani_item">
-						<img src="images/img_14.png" alt="">
-					</div>
-				</div>
-				<div class="ani_sm ani_type_top item item_4">
-					<div class="ani_item">
-						<img src="images/img_09.png" alt="">
-					</div>
-				</div>
-				<div class="ani_sm ani_type_top item item_5">
-					<div class="ani_item">
-						<img src="images/img_15.png" alt="">
-					</div>
-				</div>
-				<div class="ani_sm ani_type_top item item_6">
-					<div class="ani_item">
-						<img src="images/img_16.png" alt="">
-					</div>
-				</div>
-				<div class="ani_sm ani_type_top item item_6_1">
-					<div class="ani_item">
-						<img src="images/img_17.png" alt="">
-					</div>
-				</div> -->
 			</div>
-			<div class="main_intro">
-				<!-- <div class="ani_sm ani_type_top item item_7">
+			<!--<div class="main_intro">
+				<div class="ani_sm ani_type_top item item_7">
 					<div class="ani_item">
 						<img src="images/img_18.png" alt="">
 					</div>
@@ -143,10 +151,10 @@
 					<div class="ani_item">
 						<img src="images/img_23.png" alt="">
 					</div>
-				</div> -->
+				</div> 
 			</div>
 			<div class="main_bottom">
-				<!-- <div class="line"></div>
+				<div class="line"></div>
 				<div class="line2"></div>
 
 				<div class="ani_sm ani_type_top item item_13">
@@ -233,8 +241,8 @@
 					<div class="ani_item">
 						<img src="images/img_37.png" alt="">
 					</div>
-				</div> -->
-			</div>
+				</div>
+			</div>-->
 		</div>
 		<!-- //컨텐츠 영역 -->
 	</div>
@@ -371,7 +379,7 @@ gsap.timeline({
 
 // 마지막 콘텐츠
 .fromTo('.a_10', {top: '35%', opacity: 0}, {top: '25%', opacity: 1, duration: 2, ease: 'power1.in'})
-.fromTo('.a_11', {top: '50%', opacity: 0}, {top: '34%', opacity: 1, duration: 1, ease: 'power1.in'});
+.fromTo('.a_11', {top: '50%', opacity: 0}, {top: '38%', opacity: 1, duration: 1, ease: 'power1.in'});
 
 gsap.to(".line2", {
   ease: "none",
@@ -385,6 +393,14 @@ gsap.to(".line2", {
 
 // 초기 실행
 adjustElementsForScreenSize();
+
+function setVhUnit() {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
+setVhUnit();
+window.addEventListener('resize', setVhUnit);
 	</script>
 </body>
 </html>
