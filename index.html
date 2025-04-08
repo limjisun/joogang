@@ -9,8 +9,6 @@
 	<title>임지선</title>
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/jquery.easing.js"></script>
-	<script src="js/swiper-bundle.min.js"></script>
-	<script src="js/slick.js"></script>
 	<style>
       
 	</style>
@@ -161,7 +159,7 @@
 
 					<div class="ani_sm ani_type_top item item_15">
 						<div class="ani_item">
-							<div class="white_color font-15  p-r30">조용하지만 분명한 책임감으로 일의 흐름을 지켜내고,
+							<div class="white_color font-15 p-r30">조용하지만 분명한 책임감으로 일의 흐름을 지켜내고,
 								신속하고 정확한 실행으로 결과를 만들어갑니다.
 								지속 가능한 UI 개발자로 자리 잡겠습니다.</div>
 						</div>
@@ -199,143 +197,143 @@
 	<script src="js/gsap-public/minified/ScrollTrigger.min.js"></script>
 	<script src="js/gsap-public/minified/MotionPathPlugin.min.js"></script>
 	<script>
-		// 브라우저 크기에 따른 요소 크기 조정을 위한 함수 추가
-function adjustElementsForScreenSize() {
-  var screenWidth = window.innerWidth;
-  // 애니메이션 요소 위치 조정 로직 필요 시 여기에 추가
-}
+	
+	// 브라우저 크기에 따른 요소 크기 조정을 위한 함수 추가
+	function adjustElementsForScreenSize() {
+	var screenWidth = window.innerWidth;
+	}
 
-// 페이지 로드 및 리사이즈 시 실행
-$(window).on('load resize', function() {
-  adjustElementsForScreenSize();
-});
+	// 페이지 로드 및 리사이즈 시 실행
+	$(window).on('load resize', function() {
+	adjustElementsForScreenSize();
+	});
 
-// 스크롤바 플러그인 초기화
-var scrollObj = window.Scrollbar.init(document.querySelector('.scroll_bar'), {thumbMinSize:10, speed:2});
+	// 스크롤바 플러그인 초기화
+	var scrollObj = window.Scrollbar.init(document.querySelector('.scroll_bar'), {thumbMinSize:10, speed:2});
 
-ScrollTrigger.scrollerProxy(".scroll_bar", {
-  scrollTop(value) {
-    if (arguments.length) {
-      scrollObj.scrollTop = value;
-    }
-    return scrollObj.scrollTop;
-  }
-});
+	ScrollTrigger.scrollerProxy(".scroll_bar", {
+	scrollTop(value) {
+		if (arguments.length) {
+		scrollObj.scrollTop = value;
+		}
+		return scrollObj.scrollTop;
+	}
+	});
 
-scrollObj.addListener(function(e) {
-  var _this = this;
-  ScrollTrigger.update();
-  var scrollTop = this.scrollTop + _this.bounding.top;
-  var srcollSec = _this.bounding.bottom - _this.bounding.top;
+	scrollObj.addListener(function(e) {
+	var _this = this;
+	ScrollTrigger.update();
+	var scrollTop = this.scrollTop + _this.bounding.top;
+	var srcollSec = _this.bounding.bottom - _this.bounding.top;
 
-  $('.fixed_panel').each(function(i, v) {
-    $(this).css('transform', 'translate(0, '+ (_this.scrollTop - ($(this).height() -  $('.motion').height())) + 'px)');
-  });
+	$('.fixed_panel').each(function(i, v) {
+		$(this).css('transform', 'translate(0, '+ (_this.scrollTop - ($(this).height() -  $('.motion').height())) + 'px)');
+	});
 
-  scrollAni();
-});
+	scrollAni();
+	});
 
-function scrollAni() {
-  var srcollSec = scrollObj.bounding.bottom - scrollObj.bounding.top;
+	function scrollAni() {
+	var srcollSec = scrollObj.bounding.bottom - scrollObj.bounding.top;
 
-  $.each($('.scroll_motion').find('.ani_sm'), function(i, v) {
-    if ($(this).is('.ani_none')) {
-      return;
-    }
-    var thisPosTop = $(this).offset().top - scrollObj.bounding.top;
+	$.each($('.scroll_motion').find('.ani_sm'), function(i, v) {
+		if ($(this).is('.ani_none')) {
+		return;
+		}
+		var thisPosTop = $(this).offset().top - scrollObj.bounding.top;
 
-    var thisPosTopUp = ($(this).offset().top - scrollObj.bounding.top);
-    // 콘텐츠 밑에서 위로 나올 때
-    if (srcollSec - 50 > thisPosTop && !$(this).is('.ani_active') && !$(this).is('.ani_back')) {
-      $(this).addClass('ani_active');
-    }
+		var thisPosTopUp = ($(this).offset().top - scrollObj.bounding.top);
+		// 콘텐츠 밑에서 위로 나올 때
+		if (srcollSec - 50 > thisPosTop && !$(this).is('.ani_active') && !$(this).is('.ani_back')) {
+		$(this).addClass('ani_active');
+		}
 
-    // 콘텐츠 위/아래로 빠질때
-    if ((thisPosTop + 150) < 0 && $(this).is('.ani_active')) {
-    } else if ((thisPosTop + 50) > srcollSec && $(this).is('.ani_active')) {
-      $(this).removeClass('ani_back ani_active');
-    }
-  });
-}
+		// 콘텐츠 위/아래로 빠질때
+		if ((thisPosTop + 150) < 0 && $(this).is('.ani_active')) {
+		} else if ((thisPosTop + 50) > srcollSec && $(this).is('.ani_active')) {
+		$(this).removeClass('ani_back ani_active');
+		}
+	});
+	}
 
-ScrollTrigger.defaults({ scroller: document.querySelector('.scroll_bar') });
+	ScrollTrigger.defaults({ scroller: document.querySelector('.scroll_bar') });
 
-gsap.config({
-  force3D: true
-});
+	gsap.config({
+	force3D: true
+	});
 
-gsap.registerPlugin(ScrollTrigger);
+	gsap.registerPlugin(ScrollTrigger);
 
-gsap.fromTo('.a_1', {opacity:0}, {opacity:1, delay:0.3, ease: 'power1.out', onStart:function() {
-  $('.motion_wrap, .main_content').css('opacity', '1');
-}, onComplete:function() {
-}});
+	gsap.fromTo('.a_1', {opacity:0}, {opacity:1, delay:0.3, ease: 'power1.out', onStart:function() {
+	$('.motion_wrap, .main_content').css('opacity', '1');
+	}, onComplete:function() {
+	}});
 
-// GSAP 애니메이션 타임라인
-gsap.timeline({
-  scrollTrigger: {
-    pinnedContainer: '.motion_wrap',
-    trigger: '.motion',
-    start: 'top 0',  // 상단에서 시작
-    endTrigger: ".main_content",
-    end: "top -300%",
-    pin: true,
-    scrub: 0.8,
-    onLeave: function(progress, direction, isActive) {
-      $('.motion_wrap').addClass('fixed_panel');
-    },
-    onEnterBack: function(progress, direction, isActive) {
-      $('.motion_wrap').removeClass('fixed_panel').css('transform', '');
-    },
-  }
-})
-// 첫 번째 요소 사라짐
-.fromTo('.a_1', {opacity: 1, top: '45%'}, {opacity: 0, top: '45%', ease: 'power1.out'})
+	// GSAP 애니메이션 타임라인
+	gsap.timeline({
+	scrollTrigger: {
+		pinnedContainer: '.motion_wrap',
+		trigger: '.motion',
+		start: 'top 0',  // 상단에서 시작
+		endTrigger: ".main_content",
+		end: "top -300%",
+		pin: true,
+		scrub: 0.8,
+		onLeave: function(progress, direction, isActive) {
+		$('.motion_wrap').addClass('fixed_panel');
+		},
+		onEnterBack: function(progress, direction, isActive) {
+		$('.motion_wrap').removeClass('fixed_panel').css('transform', '');
+		},
+	}
+	})
+	// 첫 번째 요소 사라짐
+	.fromTo('.a_1', {opacity: 1, top: '45%'}, {opacity: 0, top: '45%', ease: 'power1.out'})
 
-// 텍스트 요소들 나타남 - 텍스트 3개 모두 동시에 나타나게 함
-.fromTo('.a_2', {top: '10%', opacity: 0}, {top: '14%', opacity: 1, duration: 1, ease: 'power1.out'})
-.fromTo('.a_3', {top: '15%', opacity: 0}, {top: '20%', opacity: 1, duration: 1, ease: 'power1.out'}, '<0.1')
-.fromTo('.a_4', {top: '25%', opacity: 0}, {top: '32%', opacity: 1, duration: 1, ease: 'power1.out'}, '<0.2')
-.fromTo('.tag_1', {top: '60%', opacity: 0}, {top: '78%', opacity: 1, duration: 1, ease: 'power1.out'})
-.fromTo('.tag_2', {top: '65%', opacity: 0}, {top: '89%', opacity: 1, duration: 1, ease: 'power1.out'})
-.fromTo('.tag_3', {top: '60%', opacity: 0}, {top: '94%', opacity: 1, duration: 1, ease: 'power1.out'})
-.fromTo('.tag_4', {top: '67%', opacity: 0}, {top: '69%', opacity: 1, duration: 1, ease: 'power1.out'})
-.fromTo('.tag_5', {top: '57%', opacity: 0}, {top: '62%', opacity: 1, duration: 1, ease: 'power1.out'})
-
-
-.to('.a_2', {top: '-20%', opacity: 0, duration: 1.5, ease: 'power1.in'}, 'moveUp')
-.to('.a_3', {top: '-10%', opacity: 0, duration: 1.5, ease: 'power1.in'}, 'moveUp+=0.1')
-.to('.a_4', {top: '0%', opacity: 0, duration: 1.5, ease: 'power1.in'}, 'moveUp+=0.2')
-.to('.tag_1', {top: '58%', opacity: 0, duration: 1.5, ease: 'power1.in'}, 'moveUp')
-.to('.tag_2', {top: '69%', opacity: 0, duration: 1.5, ease: 'power1.in'}, 'moveUp+=0.1')
-.to('.tag_3', {top: '74%', opacity: 0, duration: 1.5, ease: 'power1.in'}, 'moveUp+=0.2')
-.to('.tag_4', {top: '49%', opacity: 0, duration: 1.5, ease: 'power1.in'}, 'moveUp+=0.15')
-.to('.tag_5', {top: '42%', opacity: 0, duration: 1.5, ease: 'power1.in'}, 'moveUp+=0.25')
+	// 텍스트 요소들 나타남 - 텍스트 3개 모두 동시에 나타나게 함
+	.fromTo('.a_2', {top: '10%', opacity: 0}, {top: '14%', opacity: 1, duration: 1, ease: 'power1.out'})
+	.fromTo('.a_3', {top: '15%', opacity: 0}, {top: '20%', opacity: 1, duration: 1, ease: 'power1.out'}, '<0.1')
+	.fromTo('.a_4', {top: '25%', opacity: 0}, {top: '32%', opacity: 1, duration: 1, ease: 'power1.out'}, '<0.2')
+	.fromTo('.tag_1', {top: '60%', opacity: 0}, {top: '78%', opacity: 1, duration: 1, ease: 'power1.out'})
+	.fromTo('.tag_2', {top: '65%', opacity: 0}, {top: '89%', opacity: 1, duration: 1, ease: 'power1.out'})
+	.fromTo('.tag_3', {top: '60%', opacity: 0}, {top: '94%', opacity: 1, duration: 1, ease: 'power1.out'})
+	.fromTo('.tag_4', {top: '67%', opacity: 0}, {top: '69%', opacity: 1, duration: 1, ease: 'power1.out'})
+	.fromTo('.tag_5', {top: '57%', opacity: 0}, {top: '62%', opacity: 1, duration: 1, ease: 'power1.out'})
 
 
-// 다음 콘텐츠 표시
-.fromTo('.a_btn', {top: '72%', opacity: 0}, {top: '62%', opacity: 1, duration: 1, ease: 'power1.out'})
+	.to('.a_2', {top: '-20%', opacity: 0, duration: 1.5, ease: 'power1.in'}, 'moveUp')
+	.to('.a_3', {top: '-10%', opacity: 0, duration: 1.5, ease: 'power1.in'}, 'moveUp+=0.1')
+	.to('.a_4', {top: '0%', opacity: 0, duration: 1.5, ease: 'power1.in'}, 'moveUp+=0.2')
+	.to('.tag_1', {top: '58%', opacity: 0, duration: 1.5, ease: 'power1.in'}, 'moveUp')
+	.to('.tag_2', {top: '69%', opacity: 0, duration: 1.5, ease: 'power1.in'}, 'moveUp+=0.1')
+	.to('.tag_3', {top: '74%', opacity: 0, duration: 1.5, ease: 'power1.in'}, 'moveUp+=0.2')
+	.to('.tag_4', {top: '49%', opacity: 0, duration: 1.5, ease: 'power1.in'}, 'moveUp+=0.15')
+	.to('.tag_5', {top: '42%', opacity: 0, duration: 1.5, ease: 'power1.in'}, 'moveUp+=0.25')
 
-.fromTo('.a_btn', {top: '62%'}, {top: '5%', duration: 2, ease: 'power1.in'})
 
-.fromTo('.a_btn .dot', {left: '8px'}, {left: '63px', duration: 1}, '>-0.3')
-.fromTo('.a_btn .off', {opacity: 1}, {opacity: 0, duration: 1}, '<')
-.fromTo('.a_btn .on', {opacity: 0}, {opacity: 1, duration: 1}, '<')
-.fromTo('.a_btn .bg', {backgroundColor: '#18181d'}, {backgroundColor: '#f6330a'}, '>-0.3')
+	// 다음 콘텐츠 표시
+	.fromTo('.a_btn', {top: '72%', opacity: 0}, {top: '62%', opacity: 1, duration: 1, ease: 'power1.out'})
 
-// 마지막 콘텐츠
-.fromTo('.a_10', {top: '35%', opacity: 0}, {top: '25%', opacity: 1, duration: 2, ease: 'power1.in'})
-.fromTo('.a_11', {top: '50%', opacity: 0}, {top: '38%', opacity: 1, duration: 1, ease: 'power1.in'});
+	.fromTo('.a_btn', {top: '62%'}, {top: '5%', duration: 2, ease: 'power1.in'})
 
-gsap.to(".line2", {
-  ease: "none",
-  height: 1113,
-  scrollTrigger: {
-    trigger: ".line2",
-    start: "top bottom",
-    scrub: 2
-  }
-});
+	.fromTo('.a_btn .dot', {left: '8px'}, {left: '63px', duration: 1}, '>-0.3')
+	.fromTo('.a_btn .off', {opacity: 1}, {opacity: 0, duration: 1}, '<')
+	.fromTo('.a_btn .on', {opacity: 0}, {opacity: 1, duration: 1}, '<')
+	.fromTo('.a_btn .bg', {backgroundColor: '#18181d'}, {backgroundColor: '#f6330a'}, '>-0.3')
+
+	// 마지막 콘텐츠
+	.fromTo('.a_10', {top: '35%', opacity: 0}, {top: '25%', opacity: 1, duration: 2, ease: 'power1.in'})
+	.fromTo('.a_11', {top: '50%', opacity: 0}, {top: '38%', opacity: 1, duration: 1, ease: 'power1.in'});
+
+	gsap.to(".line2", {
+	ease: "none",
+	height: 1113,
+	scrollTrigger: {
+		trigger: ".line2",
+		start: "top bottom",
+		scrub: 3
+	}
+	});
 
 	// 초기 실행
 	adjustElementsForScreenSize();
@@ -360,8 +358,6 @@ gsap.to(".line2", {
       document.querySelector('.stamp').classList.add('show');
     }, 300);
     
-    // 스크롤 애니메이션도 넣고 싶으면 여기에 추가
-    // scrollObj.scrollTo(0, document.body.scrollHeight, 1000); <- 예시
   });
 
 	
