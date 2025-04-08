@@ -23,7 +23,7 @@
 		<div class="motion_wrap">
 			<div class="motion">
 				<div class="a_1">
-					<img src="images/img_01.png" alt="">
+					<img src="images/img_01.png" alt="중앙일보로고">
 					<div class="font-17 m_top20 font-bold700 text-center"><span class="joongang_color">UI 개발자 후보 </span>임지선</div>
 				</div>
 
@@ -59,11 +59,11 @@
 					<div class="dot"></div>
 
 					<div class="off">
-						<img src="images/a_btn_off.png" alt="">
+						<img src="images/a_btn_off.png" alt="off">
 					</div>
 
 					<div class="on">
-						<img src="images/a_btn_on.png" alt="">
+						<img src="images/a_btn_on.png" alt="on">
 					</div>
 				</div>
 
@@ -81,7 +81,7 @@
 				
 				 <div class="ani_sm ani_type_top item item_1">
 					<div class="ani_item">
-						<img src="images/logo_thejoongang.png" alt="">
+						<img src="images/logo_thejoongang.png" alt="중앙일보로고">
 					</div>
 				</div>
 				<div class="relative">
@@ -172,14 +172,20 @@
 			<div class="main_intro">
 				<div class="ani_sm ani_type_top item item_16">
 					<div class="ani_item">
-						<div class="font-18 font-bold700">끝까지 봐주셔서 감사합니다.</div>
+						<div class="font-18 font-bold700">투표하시겠습니까?</div>
 					</div>
 				</div> 
 				<div class="ani_sm ani_type_top item item_17">
 					<div class="ani_item">
-						<div class="font-18 font-bold700">중앙일보와 함께할 날을 기다리겠습니다.</div>
+						<button class="btn_subscribe">투표하기</button>
 					</div>
-				</div> 
+				</div>
+				<div class="vote_result" style="display:none;">
+					<div class="face_wrap">
+					  <img src="images/your_face.jpg" class="face" alt="임지선 얼굴">
+					  <img src="images/stamp_winner.png" class="stamp" alt="당선 도장">
+					</div>
+				  </div>
 			</div>
 
 		</div>
@@ -326,7 +332,7 @@ gsap.to(".line2", {
   scrollTrigger: {
     trigger: ".line2",
     start: "top bottom",
-    scrub: 0.5
+    scrub: 2
   }
 });
 
