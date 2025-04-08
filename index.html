@@ -180,12 +180,13 @@
 						<button class="btn_subscribe">투표하기</button>
 					</div>
 				</div>
-				<div class="vote_result" style="display:none;">
+				<div class="vote_result" style="display:none; flex-direction:column; align-items:center;">
 					<div class="face_wrap">
-					  <img src="images/your_face.jpg" class="face" alt="임지선 얼굴">
-					  <img src="images/stamp_winner.png" class="stamp" alt="당선 도장">
+					  <img src="images/img_05.jpg" class="face" alt="임지선 얼굴">
+					  <img src="images/a_btn_off.png" class="stamp" alt="당선 도장">
 					</div>
-				  </div>
+					<p class="vote_thanks">감사합니다. 중앙일보와 함께할 날을 기다리겠습니다.</p>
+				</div>
 			</div>
 
 		</div>
@@ -336,16 +337,32 @@ gsap.to(".line2", {
   }
 });
 
-// 초기 실행
-adjustElementsForScreenSize();
+	// 초기 실행
+	adjustElementsForScreenSize();
 
-function setVhUnit() {
-  let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
-}
+	function setVhUnit() {
+	let vh = window.innerHeight * 0.01;
+	document.documentElement.style.setProperty('--vh', `${vh}px`);
+	}
 
-setVhUnit();
-window.addEventListener('resize', setVhUnit);
+	setVhUnit();
+	window.addEventListener('resize', setVhUnit);
+
+	document.querySelector('.btn_subscribe').addEventListener('click', function() {
+    // 투표 영역 보여주기
+    document.querySelector('.vote_result').style.display = 'flex';
+
+    // 당선 도장 효과 발동
+    setTimeout(() => {
+      document.querySelector('.stamp').classList.add('show');
+    }, 300);
+    
+    // 스크롤 애니메이션도 넣고 싶으면 여기에 추가
+    // scrollObj.scrollTo(0, document.body.scrollHeight, 1000); <- 예시
+  });
+
+	
+
 	</script>
 </body>
 </html>
