@@ -9,6 +9,7 @@ body {width:100%; height:100%; margin:0; padding:0; color:#111; background:#fff;
 .joongang_color{color:#f6330a}
 .white_color{color:#fff}
 .font-17{font-size: 17px;}
+.font-18{font-size: 18px;}
 .font-30{font-size: 30px;}
 .font-40{font-size: 40px;}
 .font-14{font-size: 14px;}
@@ -17,7 +18,7 @@ body {width:100%; height:100%; margin:0; padding:0; color:#111; background:#fff;
 .font-bold700{font-weight: 700;}
 .p-r30{padding-right: 30px;}
 .text-center{text-align: center;}
-.relative{position: relative;margin-top: 145px;min-height: 500px;}
+.relative{position: relative;margin-top: 145px;min-height: 1120px;}
 
 
 
@@ -218,7 +219,7 @@ body {width:100%; height:100%; margin:0; padding:0; color:#111; background:#fff;
     position: relative; 
     width: 100%;
     height: auto; 
-    min-height: 250px;
+    min-height: 800px;
     background: #303030; 
     overflow: hidden;
     padding-bottom: 50px;
@@ -257,16 +258,16 @@ body {width:100%; height:100%; margin:0; padding:0; color:#111; background:#fff;
 .line {
     position: absolute;
     top: 0;
-    left: 13%;
+    left: 10%;
     width: 2px;
-    height: 465px;
+    height: 1113px;
     background: #e2e0e0;
 }
 
 .line2 {
     position: absolute; 
     top: 0px;
-    left: 13%;
+    left: 10%;
     width: 2px;
     height: 0px;
     background: #ce3726;
@@ -275,8 +276,8 @@ body {width:100%; height:100%; margin:0; padding:0; color:#111; background:#fff;
 /* 미디어 쿼리 추가 */
 @media screen and (max-width: 767px) {
     /* 모바일 기기 */
-    .main_top, .main_intro, .main_bottom {
-        min-height: 400px;
+    .main_top {
+        min-height: 790px;
     }
     
     .line, .line2 {
@@ -284,12 +285,7 @@ body {width:100%; height:100%; margin:0; padding:0; color:#111; background:#fff;
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-    /* 태블릿 기기 */
-    .line, .line2 {
-        left: 12%;
-    }
-}
+
 .border{
     background: #fff;
     width: 80%;
@@ -298,24 +294,26 @@ body {width:100%; height:100%; margin:0; padding:0; color:#111; background:#fff;
 
 
 /* 아이템 위치 - 스크롤 콘텐츠 영역 */
-.item_1 { left: 8%; top: 7%; width: 40%; }
+.item_1 {left: 5%;top: 4%;width: 40%;max-width: 200px;}
 .item_2 { left: 12%; top: -1%;}
-.item_3 { left: 12%; top: 6%;}
-.item_4 { left: 12%; top: 11%;}
-.item_5 { left: 12%; top: 16%;}
-.item_6 { left: 12%; top: 34%;}
-.item_6_1 { left: 0; top: 71%;}
+.item_3 {left: 12%;top: 4%;}
+.item_4 {left: 12%;top: 7%;}
+.item_5 {left: 12%;top: 10%;}
+.item_6 {left: 12%;top: 16%;}
 
-.item_7 { left: 19%; top: 12%; width: 58%; max-width: 217px; }
-.item_8 { left: 19%; top: 28%; width: 9%; max-width: 32.5px; }
-.item_9 { left: 19%; top: 38%; width: 52%; max-width: 197px; }
-.item_10 { left: 19%; top: 53%; width: 69%; max-width: 261px; }
-.item_11 { left: 19%; top: 73%; width: 47%; max-width: 178px; }
-.item_12 { left: 9%; top: 87%; width: 84%; max-width: 317px; }
+.item_7 {left: 12%;top: 35%;}
+.item_8 {left: 12%;top: 41%;}
+.item_9 {left: 12%;top: 44%;}
+.item_10 {left: 12%;top: 47%;}
+.item_11 {left: 12%;top: 53%;}
 
-.item_13 { left: 1.5%; top: 5%; width: 18%; max-width: 68px; }
-.item_14 { left: 23%; top: 6%; width: 49%; max-width: 185px; }
-.item_15 { left: 23%; top: 10%; width: 51%; max-width: 193px; }
+.item_12 {left: 12%;top: 74%;}
+.item_13 {left: 12%;top: 80%;}
+.item_14 {left: 12%;top: 83%;}
+.item_15 {left: 12%;top: 89%;}
+
+
+
 .item_16 { left: 6%; top: 16%; width: 13%; max-width: 49px; }
 .item_17 { left: 23%; top: 17%; width: 42%; max-width: 156px; }
 .item_18 { left: 18%; top: 23%; width: 70%; max-width: 265px; }
